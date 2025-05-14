@@ -1,0 +1,24 @@
+.hero{
+    &_block{
+        position: relative;
+        height: 796px;
+        overflow: hidden;
+    }
+    h1, h5, .text_1{
+        max-width: 656px;
+    }
+    h1{
+        margin-bottom: 50px;
+    }
+    .text_1{
+        margin-bottom: 100px;
+    }
+    h5{
+        margin-bottom: 30px;
+    }
+    &_img{
+        position: absolute;
+        top: -75px;
+        right: 0;
+    }
+}
