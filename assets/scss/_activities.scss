@@ -1,0 +1,20 @@
+.activities {
+    padding: 100px 0;
+
+    &_block {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .activity {
+        display: flex;
+        gap: 32px;
+        &_left{
+            width: calc(35% - 32px);
+        }
+        &_right{
+            width: 65%;
+        }
+    }
+}

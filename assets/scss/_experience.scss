@@ -1,0 +1,43 @@
+.experience{
+    h2{
+        padding-bottom: 40px;
+        border-bottom: 1px solid $black;
+        margin-bottom: 80px;
+    }
+    &_block{
+        background-color: $white;
+        border-radius: 30px;
+        padding: 60px 72px 80px;
+    }
+    &_main{
+        display: flex;
+        gap: 30px;
+    }
+    &_left{
+        width: calc(32% - 30px);
+    }
+    &_right{
+        width: 68%;
+    }
+    &_icon{
+        height: 68px;
+        margin-bottom: 30px;
+        img{
+            object-fit: contain;
+        }
+    }
+    h4{
+        margin-bottom: 40px;
+    }
+    .list_check{
+        .list_arrow, .list_check_card{
+            margin-left: 40px;
+        }
+        .list_check_card{
+            background-color: $rey_bg;
+            &::before{
+                display: none;
+            }
+        }
+    }
+}
