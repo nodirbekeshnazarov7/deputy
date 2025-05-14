@@ -167,15 +167,280 @@ html {
 		width: 3px;
 	}
 }
+
+
+
+/* ======= Variables ========== */
+
+// colors
+$black: #29292E;
+$white: #FFF;
+$grey_text: #676771;
+$rey_bg: #F5F5F5;
+$brown_light: #AD937B;
+$brown_dark: #947E69;
+$brown_hower: #8C7764;
+
+// headings
+h1{
+	color: $black;
+	font-family: Gilroy;
+	font-size: 80px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+h2{
+	color: $black;
+	font-family: Gilroy;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 54px; /* 135% */
+}
+h3{
+	color: $black;
+	font-family: Gilroy;
+	font-size: 26px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 36px; /* 138.462% */
+}
+h4{
+	color: $black;
+	font-family: Gilroy;
+	font-size: 26px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 36px; /* 138.462% */
+}
+h5{
+	color: $black;
+	font-family: Gilroy;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 32px; /* 160% */
+	.l{
+		font-size: 22px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 34px; /* 154.545% */
+	}
+}
+
+// texts
+.text_1{
+	color: $black;
+	font-family: Gilroy;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 32px; /* 160% */
+}
+.text_2{
+	color: $black;
+	font-family: Gilroy;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 24px; /* 150% */
+}
+.text_3{
+	color: $black;
+	font-family: Gilroy;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 22px; /* 157.143% */
+}
+
+// links
+.link{
+	color: $black;
+	font-family: Gilroy;
+	text-decoration: none;
+	transition: all .3s ease;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	&:hover{
+		color: $brown_hower;
+	}
+	&.active{
+		color: $brown_hower;
+	}
+}
+.link_1{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 36px; /* 180% */
+}
+.link_2{
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px; /* 150% */
+}
+.link_3{
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 22px; /* 157.143% */
+}
+
+// buttons, arrows
+.btn{
+	display: flex;
+	align-items: center;
+	background-color: $brown_light;
+	border: none;
+	outline: none;
+	padding: 0 20px;
+	color: $white;
+	font-family: Gilroy;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 36px; /* 180% */
+	transition: all .3s ease;
+	&:hover{
+		background-color: $brown_hower;
+		color: $white;
+	}
+	&.active{
+		background-color: $brown_hower;
+		color: $white;
+	}
+}
+.btn_video{
+	gap: 20px;
+	padding: 10px 30px;
+}
+.btn_link{
+	gap: 10px;
+	padding: 8px 20px;
+	font-size: 16px;
+}
+
+.arrow{
+	border-radius: 12px;
+	background-color: $rey_bg;
+	padding: 13px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	svg, path{
+		transition: all .3s ease;
+	}
+	&:hover{
+		path{
+			stroke: $brown_light;
+		}
+	}
+	&.active{
+		path{
+			stroke: $brown_light;
+		}
+	}
+	&.disabled{
+		svg{
+			opacity: .15;
+		}
+	}
+}
+
+.show_more{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	color: $brown_dark;
+	font-family: Gilroy;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px; /* 150% */
+	transition: all .3s ease;
+	span{
+		position: relative;
+		border-bottom: 1px dotted $brown_dark;
+		transition: all .3s ease;
+	}
+	path{
+		stroke: $brown_light;
+		transition: all .3s ease;
+	}
+	&:hover{
+		color: $brown_hower;
+		span{
+			border-bottom: none;
+		}
+		path{
+			stroke: $brown_hower;
+		}
+	}
+	&.active{
+		color: $brown_hower;
+		span{
+			border-bottom: none;
+		}
+		path{
+			stroke: $brown_hower;
+		}
+	}
+}
+
+input{
+	border: none;
+	outline: none;
+	width: 100%;
+	padding: 0 0 5px;
+	color: $black;
+	font-family: Gilroy;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 32px; /* 160% */
+	border-bottom: 1px solid $black;
+	transition: all .3s ease;
+	&::placeholder{
+		color: $grey_text;
+		font-family: Gilroy;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 32px; /* 160% */
+	}
+	&.error{
+		border-bottom: 1px solid $brown_light;
+		color: $brown_light;
+		&::placeholder{
+			color: $brown_light;
+		}
+	}
+	
+}
+/* =============== */
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 body {
-	font-family: "TT Travels";
-	background: #e5e5e5;
+	font-family: Gilroy;
+	background: $rey_bg;
 }
 .wrapper {
 	overflow: hidden;
+}
+.container{
+	max-width: 1216px;
+	width: 100%;
+	margin: 0 auto;
 }

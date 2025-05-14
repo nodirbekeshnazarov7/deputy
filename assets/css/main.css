@@ -180,6 +180,318 @@ html::-webkit-scrollbar-thumb {
   width: 3px;
 }
 
+/* ======= Variables ========== */
+h1 {
+  color: #29292E;
+  font-family: Gilroy;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h2 {
+  color: #29292E;
+  font-family: Gilroy;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px; /* 135% */
+}
+
+h3 {
+  color: #29292E;
+  font-family: Gilroy;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 138.462% */
+}
+
+h4 {
+  color: #29292E;
+  font-family: Gilroy;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px; /* 138.462% */
+}
+
+h5 {
+  color: #29292E;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
+}
+h5 .l {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 154.545% */
+}
+
+.text_1 {
+  color: #29292E;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+}
+
+.text_2 {
+  color: #29292E;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+.text_3 {
+  color: #29292E;
+  font-family: Gilroy;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+}
+
+.link {
+  color: #29292E;
+  font-family: Gilroy;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+.link:hover {
+  color: #8C7764;
+}
+.link.active {
+  color: #8C7764;
+}
+
+.link_1 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 180% */
+}
+
+.link_2 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+
+.link_3 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #AD937B;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  color: #FFF;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 180% */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #8C7764;
+  color: #FFF;
+}
+.btn.active {
+  background-color: #8C7764;
+  color: #FFF;
+}
+
+.btn_video {
+  gap: 20px;
+  padding: 10px 30px;
+}
+
+.btn_link {
+  gap: 10px;
+  padding: 8px 20px;
+  font-size: 16px;
+}
+
+.arrow {
+  border-radius: 12px;
+  background-color: #F5F5F5;
+  padding: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.arrow svg, .arrow path {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.arrow:hover path {
+  stroke: #AD937B;
+}
+.arrow.active path {
+  stroke: #AD937B;
+}
+.arrow.disabled svg {
+  opacity: 0.15;
+}
+
+.show_more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #947E69;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.show_more span {
+  position: relative;
+  border-bottom: 1px dotted #947E69;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.show_more path {
+  stroke: #AD937B;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.show_more:hover {
+  color: #8C7764;
+}
+.show_more:hover span {
+  border-bottom: none;
+}
+.show_more:hover path {
+  stroke: #8C7764;
+}
+.show_more.active {
+  color: #8C7764;
+}
+.show_more.active span {
+  border-bottom: none;
+}
+.show_more.active path {
+  stroke: #8C7764;
+}
+
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0 0 5px;
+  color: #29292E;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+  border-bottom: 1px solid #29292E;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+input::-webkit-input-placeholder {
+  color: #676771;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+}
+input::-moz-placeholder {
+  color: #676771;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+}
+input:-ms-input-placeholder {
+  color: #676771;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+}
+input::-ms-input-placeholder {
+  color: #676771;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+}
+input::placeholder {
+  color: #676771;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 160% */
+}
+input.error {
+  border-bottom: 1px solid #AD937B;
+  color: #AD937B;
+}
+input.error::-webkit-input-placeholder {
+  color: #AD937B;
+}
+input.error::-moz-placeholder {
+  color: #AD937B;
+}
+input.error:-ms-input-placeholder {
+  color: #AD937B;
+}
+input.error::-ms-input-placeholder {
+  color: #AD937B;
+}
+input.error::placeholder {
+  color: #AD937B;
+}
+
+/* =============== */
 * {
   margin: 0;
   padding: 0;
@@ -188,12 +500,18 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-  font-family: "TT Travels";
-  background: #e5e5e5;
+  font-family: Gilroy;
+  background: #F5F5F5;
 }
 
 .wrapper {
   overflow: hidden;
+}
+
+.container {
+  max-width: 1216px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 @media (max-width: 1920px) {
