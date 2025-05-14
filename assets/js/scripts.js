@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
     // hamburger
-    $(".hamurger_menu").on('click',function(e){
+    $(".hamburger_menu").on('click',function(e){
         e.preventDefault();
         $(".header_menus").addClass("active")
     })
@@ -12,5 +12,15 @@ $(document).ready(function(){
     })
 
 
-    // 
+    //footer form:
+    $('form .btn').on('click', function() {
+        $('form input, form textarea').each(function() {
+          if (!$(this).val().trim()) {
+            $(this).addClass('error');
+            $(this).attr('placeholder', 'заполните это поле!');
+          } else {
+            $(this).removeClass('error');
+          }
+        });
+      });
 });

@@ -1,0 +1,91 @@
+.footer{
+    &_block{
+        display: flex;
+        justify-content: space-between;
+    }
+    &_right{
+        width: 592px;
+    }
+    &_img{
+        width: 176px;
+        height: 176px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: #FFF;
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+    &_about{
+        margin-bottom: 46px;
+    }
+    &_email{
+        text-decoration: none;
+        color: $black;
+        font-family: Gilroy;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 36px; /* 120% */
+        margin-bottom: 19px;
+        transition: all .3s ease;
+        &:hover{
+            color: $grey_text;
+        }
+    }
+    &_socials{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            span{
+                transition: all .3s ease;
+            }
+            svg{
+                transition: all .3s ease;
+            }
+            &:hover{
+                span{
+                    color: $brown_hower;
+                }
+                svg{
+                    transition: all .3s ease;
+                    &.telegram{
+                        path:nth-child(1){
+                            fill: $brown_hower;
+                        }
+                        
+                    }
+                    &.linkedin{
+                        path{
+                            fill: $brown_hower;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        
+    }
+    &_copyright{
+        margin-top: 146px;
+    }
+    form{
+        h2{
+            margin-bottom: 60px;
+        }
+        input{
+            margin-bottom: 30px;
+        }
+        button{
+            margin: 30px 0;
+            padding: 10px 30px;
+        }
+        .text_3{
+            color: $grey_text;
+            font-weight: 400;
+        }
+    }
+}
