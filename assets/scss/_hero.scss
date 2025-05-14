@@ -1,8 +1,9 @@
 .hero{
     &_block{
         position: relative;
-        height: 796px;
-        overflow: hidden;
+        top: 24px;
+        height: 820px;
+        // overflow: hidden;
     }
     h1, h5, .text_1{
         max-width: 656px;
