@@ -451,3 +451,8 @@ body {
 ul, ol{
 	list-style: none;
 }
+hr{
+	border: none;
+	height: 1px;
+	background-color: $brown_light;
+}

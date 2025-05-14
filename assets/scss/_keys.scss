@@ -1,0 +1,27 @@
+.keys{
+    &_block{
+        border-radius: 30px;
+        background-color: $white;
+        padding: 80px 72px;
+    }
+    h2{
+        padding-bottom: 40px;
+        border-bottom: 1px solid $black;
+        margin-bottom: 80px;
+    }
+    &_items{
+        display: grid;
+        grid-template-columns: calc(33.33% - 24px) calc(33.33% - 24px) calc(33.33% - 24px);
+        gap: 100px 36px;
+    }
+    &_item{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &_icon{
+        height: 69px;
+        display: flex;
+        align-items: center;
+    }
+}   
