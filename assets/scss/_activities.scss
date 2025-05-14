@@ -1,67 +1,20 @@
-.activities{
+.activities {
     padding: 100px 0;
-    &_block{
+
+    &_block {
         display: flex;
         flex-direction: column;
         gap: 100px;
     }
-    .activity{
+
+    .activity {
         display: flex;
         gap: 32px;
-        h3{
+        &_left{
             width: calc(35% - 32px);
         }
-        ul{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            &.list{
-                width: 65%;
-            }
-        }
-        li{
-           display: flex;
-           flex-direction: column;
-           gap: 22px;
-        }
-        &_item{
-            display: flex;
-            gap: 15px;
-            align-items: flex-start;
-        }
-        &_body{
-            position: relative;
-            background-color: $white;
-            border-radius: 20px;
-            padding: 25px 40px;
-            z-index: 1;
-            &::before {
-                content: '';
-                position: absolute;
-                top: -17px;
-                left: 27px;
-                z-index: 0;
-                width: 42px;
-                height: 42px;
-                background-color: $white;
-                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-            }
-            ul{
-                display: flex;
-                flex-direction: column;
-            }
-            li{
-                display: flex;
-                align-items: flex-start;
-                flex-direction: row;
-                gap: 15px;
-            }
-            .icon{
-                object-fit: contain;
-                position: relative;
-                top: 7px;
-            }
-              
+        &_right{
+            width: 65%;
         }
     }
 }
