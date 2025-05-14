@@ -690,8 +690,8 @@ hr {
 
 .hero_block {
   position: relative;
-  height: 796px;
-  overflow: hidden;
+  top: 24px;
+  height: 820px;
 }
 .hero h1, .hero h5, .hero .text_1 {
   max-width: 656px;
@@ -711,6 +711,10 @@ hr {
   right: 0;
 }
 
+.keys {
+  position: relative;
+  z-index: 2;
+}
 .keys_block {
   border-radius: 30px;
   background-color: #FFF;
@@ -744,6 +748,108 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.activities {
+  padding: 100px 0;
+}
+.activities_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 100px;
+}
+.activities .activity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+}
+.activities .activity h3 {
+  width: calc(35% - 32px);
+}
+.activities .activity ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.activities .activity ul.list {
+  width: 65%;
+}
+.activities .activity li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 22px;
+}
+.activities .activity_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.activities .activity_body {
+  position: relative;
+  background-color: #FFF;
+  border-radius: 20px;
+  padding: 25px 40px;
+  z-index: 1;
+}
+.activities .activity_body::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: 27px;
+  z-index: 0;
+  width: 42px;
+  height: 42px;
+  background-color: #FFF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.activities .activity_body ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.activities .activity_body li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+}
+.activities .activity_body .icon {
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: relative;
+  top: 7px;
 }
 
 @media (max-width: 1920px) {

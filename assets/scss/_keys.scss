@@ -1,4 +1,6 @@
 .keys{
+    position: relative;
+    z-index: 2;
     &_block{
         border-radius: 30px;
         background-color: $white;
