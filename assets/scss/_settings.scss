@@ -395,9 +395,10 @@ h5{
 	}
 }
 
-input{
+input, textarea{
 	border: none;
 	outline: none;
+	background-color: transparent;
 	width: 100%;
 	padding: 0 0 5px;
 	color: $black;
@@ -418,12 +419,15 @@ input{
 	}
 	&.error{
 		border-bottom: 1px solid $brown_light;
-		color: $brown_light;
+		// color: $brown_light;
 		&::placeholder{
 			color: $brown_light;
 		}
 	}
 	
+}
+textarea{
+	resize: vertical;
 }
 /* =============== */
 
@@ -443,4 +447,12 @@ body {
 	max-width: 1216px;
 	width: 100%;
 	margin: 0 auto;
+}
+ul, ol{
+	list-style: none;
+}
+hr{
+	border: none;
+	height: 1px;
+	background-color: $brown_light;
 }
