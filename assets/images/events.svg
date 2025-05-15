@@ -1,0 +1,14 @@
+<svg width="80" height="71" viewBox="0 0 80 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon">
+<path id="Rectangle 527" d="M9.5 5H1V70H79V5H70.5" stroke="#AD937B"/>
+<path id="Vector 358" d="M17 5H27.5" stroke="#AD937B"/>
+<path id="Vector 359" d="M35 5H45.5" stroke="#AD937B"/>
+<path id="Vector 360" d="M53 5H63.5" stroke="#AD937B"/>
+<rect id="Rectangle 528" x="9.5" y="0.5" width="7" height="13" rx="1.5" stroke="#AD937B"/>
+<rect id="Rectangle 529" x="27.5" y="0.5" width="7" height="13" rx="1.5" stroke="#AD937B"/>
+<rect id="Rectangle 530" x="45.5" y="0.5" width="7" height="13" rx="1.5" stroke="#AD937B"/>
+<rect id="Rectangle 531" x="63.5" y="0.5" width="7" height="13" rx="1.5" stroke="#AD937B"/>
+<path id="Vector 361" d="M1 20H79" stroke="#AD937B"/>
+<path id="Star 1" d="M44.3506 39.626L44.4668 39.8525L44.7178 39.8926L54.1699 41.3955L47.4072 48.168L47.2275 48.3486L47.2666 48.5996L48.7578 58.0547L40.2266 53.7139L40 53.5986L39.7734 53.7139L31.2412 58.0547L32.7334 48.5996L32.7725 48.3486L32.5928 48.168L25.8291 41.3955L35.2822 39.8926L35.5332 39.8525L35.6494 39.626L40 31.0996L44.3506 39.626Z" stroke="#AD937B"/>
+</g>
+</svg>
