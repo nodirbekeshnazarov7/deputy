@@ -418,8 +418,25 @@ h5 {
 
 	span {
 		position: relative;
-		border-bottom: 1px dotted $brown_dark;
+		// border-bottom: 1px dotted $brown_dark;
 		transition: all .3s ease;
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			border: none;
+			width: 100%;
+			height: 1px; /* yoki kerakli balandlik */
+			background-image: repeating-linear-gradient(
+			  to right,
+			  $brown_dark 0,
+			  $brown_dark 4px,
+			  transparent 4px,
+			  transparent 8px
+			);
+			transition: all .1s ease;
+		}
 	}
 
 	path {
@@ -432,6 +449,9 @@ h5 {
 
 		span {
 			border-bottom: none;
+			&::after{
+				opacity: 0;
+			}
 		}
 
 		path {
@@ -615,3 +635,86 @@ hr {
 		background-color: $grey_text;
 	}
 }
+.section_title{
+	padding-bottom: 40px;
+	border-bottom: 1px solid $black;
+	margin-bottom: 80px;
+}
+
+.custom_accordion {
+	margin-bottom: 120px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+  }
+  
+  .accordion_header {
+	background-color: $white;
+	border-radius: 20px;
+	padding: 30px 30px 30px 72px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	&_content{
+		display: flex;
+		align-items: flex-start;
+		gap: 32px;
+	}
+	.text_2{
+		max-width: 593px;
+		width: 100%;
+	}
+  }
+  .accordion_title{
+	max-width: 312px;
+	width: 100%;
+  }
+  .accordion_icon{
+	width: 56px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 12px;
+	background-color: $rey_bg;
+  }
+  .accordion_icon svg {
+	transition: all 0.3s ease;
+  }
+  
+  .accordion_header.active .icon_plus {
+	display: none;
+  }
+  
+  .accordion_header.active .accordion_icon::before {
+	content: "";
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"><path d="M0 15H30" stroke="%2329292E"/></svg>');
+	background-repeat: no-repeat;
+	background-position: center;
+  }
+  .accordion_content {
+	display: none;
+	background-color: $white;
+	border-radius: 20px;
+	padding: 30px 30px 30px 72px;
+	animation: fade_in 0.3s ease-in-out;
+	li{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 28px 0;
+		border-bottom: 1px solid $black;
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+  }
+  
+  @keyframes fade_in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+  }
+  
