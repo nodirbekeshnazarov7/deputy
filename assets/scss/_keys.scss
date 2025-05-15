@@ -6,11 +6,6 @@
         background-color: $white;
         padding: 80px 72px;
     }
-    h2{
-        padding-bottom: 40px;
-        border-bottom: 1px solid $black;
-        margin-bottom: 80px;
-    }
     &_items{
         display: grid;
         grid-template-columns: calc(33.33% - 24px) calc(33.33% - 24px) calc(33.33% - 24px);
