@@ -374,6 +374,9 @@ h5 .l {
 .arrow.active path {
   stroke: #AD937B;
 }
+.arrow.disabled {
+  pointer-events: none;
+}
 .arrow.disabled svg {
   opacity: 0.15;
 }
@@ -544,6 +547,7 @@ textarea {
 body {
   font-family: Gilroy;
   background: #F5F5F5;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -719,6 +723,7 @@ hr {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 32px;
+  width: 100%;
 }
 .accordion_header .text_2 {
   max-width: 593px;
@@ -807,8 +812,104 @@ hr {
     opacity: 1;
   }
 }
+/* Custom Modal */
+.modal_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 46, 0.9);
+  z-index: 999;
+  overflow-y: auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 60px 20px;
+  /* yuqori va pastdan joy ochamiz */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.custom_modal {
+  position: relative;
+  -webkit-animation: slideDown 0.3s ease;
+          animation: slideDown 0.3s ease;
+}
+.custom_modal .swiper-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.custom_modal .swiper-slide {
+  background-color: #F5F5F5;
+}
+
+.modal_content {
+  width: 54%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.modal_content video, .modal_content img {
+  width: 100%;
+  height: auto;
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+.modal_close {
+  position: absolute;
+  top: 0;
+  right: -61px;
+  cursor: pointer;
+}
+
+.modal_next, .modal_prev {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.modal_next {
+  right: 0;
+}
+
+.modal_prev {
+  left: 0;
+}
+
 .header {
   margin-top: 40px;
+  position: relative;
+  z-index: 999;
 }
 .header .hamburger_menu {
   display: none;
@@ -869,6 +970,9 @@ hr {
   line-height: 36px; /* 180% */
 }
 
+.footer {
+  margin-bottom: 80px;
+}
 .footer_block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1090,6 +1194,9 @@ hr {
 .experience .list_check .list_check_card::before {
   display: none;
 }
+.experience .list_point_item {
+  margin-left: 10px;
+}
 
 .awards {
   margin-bottom: 120px;
@@ -1116,10 +1223,10 @@ hr {
   border-bottom: none;
 }
 .awards_left {
-  width: calc(40% - 30px);
+  width: calc(34% - 30px);
 }
 .awards_right {
-  width: 60%;
+  width: 66%;
 }
 .awards_icon {
   height: 70px;
@@ -1230,6 +1337,9 @@ hr {
   background-color: #FFF;
   border-radius: 30px;
   padding: 60px 72px 80px;
+}
+.letters .award_img_box {
+  background-color: #F5F5F5;
 }
 
 @media (max-width: 1920px) {

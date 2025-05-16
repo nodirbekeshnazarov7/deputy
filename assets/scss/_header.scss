@@ -1,5 +1,7 @@
 .header{
     margin-top: 40px;
+    position: relative;
+    z-index: 999;
     .hamburger_menu{
         display: none;
     }
