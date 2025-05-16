@@ -44,14 +44,12 @@ $(document).ready(function () {
     const $btn = $wrapper.find('.show_more');
     const visibleCount = 4;
 
-    // Dastlab 4 tadan keyingilarni yashirish
     if ($items.length <= visibleCount) {
-      $btn.closest('.awards_show_more').hide(); // Tugmani yashirish
+      $btn.closest('.awards_show_more').hide();
     } else {
       $items.slice(visibleCount).hide();
     }
 
-    // Tugma bosilganda toggle qilish
     $btn.on('click', function () {
       const isExpanded = $wrapper.hasClass('expanded');
 
@@ -66,4 +64,116 @@ $(document).ready(function () {
       }
     });
   });
+
+  // custom modal
+  $(function () {
+    let swiperInstance;
+  
+    $('[data-modal]').on('click', function () {
+      const modalDataId = $(this).data('modal'); 
+      const $slides = $('#' + modalDataId + ' .modal_slide');
+      const $wrapper = $('#modalContentWrapper');
+      $wrapper.empty();
+  
+      $slides.each(function () {
+        const type = $(this).data('type');
+        const src = $(this).data('src');
+        let slideContent = '';
+  
+        if (type === 'video') {
+          slideContent = `
+            <div class="swiper-slide">
+              <div class="modal_slide">
+                <video src="${src}" controls></video>
+
+              </div>
+            </div>`;
+        } else if (type === 'image') {
+          slideContent = `
+            <div class="swiper-slide">
+              <div class="modal_slide">
+                <img src="${src}" alt="image">
+              </div>
+            </div>`;
+        }
+      //   <div class="video_controls">
+      //   <button class="video_play_pause">Play</button>
+      // </div>
+  
+        $wrapper.append(slideContent);
+      });
+  
+      $('#universalModal').fadeIn(300);
+  
+      if (swiperInstance) swiperInstance.destroy(true, true);
+      swiperInstance = new Swiper('.modal_items_wrapper', {
+        loop: false,
+        navigation: {
+          nextEl: '.modal_next',
+          prevEl: '.modal_prev',
+        },
+        on: {
+          init: function () {
+            updateNavButtons(this);
+          },
+          slideChange: function () {
+            updateNavButtons(this);
+          }
+        }
+      });
+  
+      if ($slides.length <= 1) {
+        $('.modal_prev, .modal_next').hide();
+      } else {
+        $('.modal_prev, .modal_next').show();
+      }
+    });
+  
+    $('.modal_overlay').on('click', function (e) {
+      if ($(e.target).is('.modal_overlay')) {
+        $(this).fadeOut(300);
+        $('#modalContentWrapper').empty();
+        $('.modal_overlay video').each(function () {
+          this.pause();
+        });
+      }
+    });
+    
+    $('.modal_close').on('click', function () {
+      $(this).closest('.modal_overlay').fadeOut(300);
+      $('#modalContentWrapper').empty();
+      $('.modal_overlay video').each(function () {
+        this.pause();
+      });
+    });
+  
+    // $(document).on('click', '.video_play_pause', function () {
+    //   const video = $(this).closest('.modal_slide').find('video').get(0);
+    //   if (video.paused) {
+    //     video.play();
+    //     $(this).text('Pause');
+    //   } else {
+    //     video.pause();
+    //     $(this).text('Play');
+    //   }
+    // });
+
+    function updateNavButtons(swiper) {
+      const $nextBtn = $('.modal_next');
+      const $prevBtn = $('.modal_prev');
+  
+      if (swiper.isEnd) {
+        $nextBtn.addClass('disabled');
+      } else {
+        $nextBtn.removeClass('disabled');
+      }
+  
+      if (swiper.isBeginning) {
+        $prevBtn.addClass('disabled');
+      } else {
+        $prevBtn.removeClass('disabled');
+      }
+    }
+  });
+  
 });
