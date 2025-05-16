@@ -42,11 +42,11 @@
                         <span class="close">
                             <i class="fs-3 fa-solid fa-xmark"></i>
                         </span>
-                        <li><a href="#">Деятельность</a></li>
-                        <li><a href="#">Опыт работы</a></li>
-                        <li><a href="#">СМИ</a></li>
-                        <li><a href="#">События и награды</a></li>
-                        <li><a href="#">Письма и рекомендации</a></li>
+                        <li><a href="#keys">Деятельность</a></li>
+                        <li><a href="#experience">Опыт работы</a></li>
+                        <li><a href="#about">СМИ</a></li>
+                        <li><a href="#awards">События и награды</a></li>
+                        <li><a href="#letters">Письма и рекомендации</a></li>
                     </ul>
                     <div class="header_contact">
                         <a href="#">Связаться со мной</a>
@@ -55,7 +55,7 @@
             </div>
         </header>
 
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="container">
                 <div class="hero_block">
                     <h1>Екатерина Лебедева</h1>
@@ -63,7 +63,7 @@
                     <div class="text_1">Эксперт по GR коммуникациям и PR продвижению бизнеса</div>
                     <h5 class="l">Помогаю бизнесу выстраивать диалог
                         с государством и достигать стратегических целей</h5>
-                    <button class="btn btn_video">
+                    <button class="btn btn_video" data-modal="videoPresentation">
                         <span>Видеопрезентация</span>
                         <img src="./assets/images/video_icon.png" alt="icon">
                     </button>
@@ -74,7 +74,7 @@
             </div>
         </section>
 
-        <section class="keys">
+        <section class="keys" id="keys">
             <div class="container">
                 <div class="keys_block">
                     <h2 class="section_title">Ключевые направления <br>
@@ -118,7 +118,7 @@
             </div>
         </section>
 
-        <section class="activities">
+        <section class="activities" id="activities">
             <div class="container">
                 <div class="activities_block">
                     <div class="activity">
@@ -352,7 +352,7 @@
             </div>
         </section>
 
-        <section class="experience">
+        <section class="experience" id="experience">
             <div class="container">
                 <div class="experience_block">
                     <h2 class="section_title">Опыт работы</h2>
@@ -386,8 +386,8 @@
                                     <li>
                                         <div class="list_arrow_item">
                                             <img src="./assets/images/activity_arrow.svg" alt="arrow">
-                                            <span class="text_2">Анализ законодательных
-                                                инициатив </span>
+                                            <span class="text_2">Управление репутацией
+                                                в публичном поле </span>
                                         </div>
                                     </li>
                                 </ul>
@@ -504,7 +504,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="about_block">
                     <h2 class="section_title">СМИ обо мне</h2>
@@ -810,7 +810,7 @@
             </div>
         </section>
         
-        <section class="awards">
+        <section class="awards" id="awards">
             <div class="container">
                 <h2 class="section_title">События и награды</h2>
                 <div class="awards_block">
@@ -829,7 +829,7 @@
                                         <h5>Выступление на Петербургском Международном Экономическом форуме</h5>
                                         <p class="text_2">Текстовое описание для события, которое состоит из двух-трёх предложений. Второе предложение для текстового описания. Третье предложение для текстового описания.</p>
                                         <div class="awards_button_wrapper">
-                                            <button type="button" class="btn btn_link">
+                                            <button type="button" class="btn btn_link" data-modal="galleryModal">
                                                 <img src="./assets/images/icon_photo.svg" alt="">
                                                 <span class="link_2">Галерея</span>
                                             </button>
@@ -839,10 +839,49 @@
                                 <div class="awards_item">
                                     <div class="awards_event">
                                         <div class="awards_event_date text_3">05.06.2024</div>
-                                        <h5>Выступление на Петербургском Международном Экономическом форуме</h5>
+                                        <h5>Best Business Awards</h5>
                                         <p class="text_2">Текстовое описание для события, которое состоит из двух-трёх предложений. Второе предложение для текстового описания. Третье предложение для текстового описания.</p>
                                         <div class="awards_button_wrapper">
-                                            <button type="button" class="btn btn_link">
+                                            <button type="button" class="btn btn_link" data-modal="galleryModal">
+                                                <img src="./assets/images/icon_photo.svg" alt="">
+                                                <span class="link_2">Галерея</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="awards_item">
+                                    <div class="awards_event">
+                                        <div class="awards_event_date text_3">05.06.2024</div>
+                                        <h5>Economic Congress International Municipal BRICS Forum</h5>
+                                        <p class="text_2">Текстовое описание для события, которое состоит из двух-трёх предложений. Второе предложение для текстового описания. Третье предложение для текстового описания.</p>
+                                        <div class="awards_button_wrapper">
+                                            <button type="button" class="btn btn_link" data-modal="galleryModal">
+                                                <img src="./assets/images/icon_photo.svg" alt="">
+                                                <span class="link_2">Галерея</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="awards_item">
+                                    <div class="awards_event">
+                                        <div class="awards_event_date text_3">05.06.2024</div>
+                                        <h5>Модератор крупной сессии на Международном Муниципальном Форуме стран БРИКС в Москве (площадка ЦВК «Экспоцентр»)</h5>
+                                        <p class="text_2">Текстовое описание для события, которое состоит из двух-трёх предложений. Второе предложение для текстового описания. Третье предложение для текстового описания.</p>
+                                        <div class="awards_button_wrapper">
+                                            <button type="button" class="btn btn_link" data-modal="galleryModal">
+                                                <img src="./assets/images/icon_photo.svg" alt="">
+                                                <span class="link_2">Галерея</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="awards_item">
+                                    <div class="awards_event">
+                                        <div class="awards_event_date text_3">05.06.2024</div>
+                                        <h5>Модератор крупной сессии на Международном Муниципальном Форуме стран БРИКС в Москве (площадка ЦВК «Экспоцентр»)</h5>
+                                        <p class="text_2">Текстовое описание для события, которое состоит из двух-трёх предложений. Второе предложение для текстового описания. Третье предложение для текстового описания.</p>
+                                        <div class="awards_button_wrapper">
+                                            <button type="button" class="btn btn_link" data-modal="galleryModal">
                                                 <img src="./assets/images/icon_photo.svg" alt="">
                                                 <span class="link_2">Галерея</span>
                                             </button>
@@ -853,7 +892,12 @@
                            <div class="awards_show_more">
                             <button type="button" class="show_more">
                                 <span class="link_2">Загрузить ещё</span>
-                                <img src="./assets/images/show_more.svg" alt="">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                                    <path d="M25 13C25 6.37258 19.6274 1 13 1C8.98362 1 5.42813 2.97313 3.24996 6.00291C3.01928 6.32379 2.80404 6.65651 2.60535 7" stroke="#AD937B"/>
+                                    <path d="M2.5 1.75V7H7.75" stroke="#AD937B"/>
+                                    <path d="M1.00004 13C1.00004 19.6274 6.37262 25 13 25C17.0164 25 20.5719 23.0269 22.75 19.9971C22.9807 19.6762 23.196 19.3435 23.3947 19" stroke="#AD937B"/>
+                                    <path d="M23.5 24.25V19H18.25" stroke="#AD937B"/>
+                                </svg>
                             </button>
                            </div>
                         </div>
@@ -877,9 +921,9 @@
                                                 </div>
                                                 <div class="award_img_box">
                                                     <div class="award_img">
-                                                        <img src="./assets/images/diplom.png" alt="diplom">
+                                                        <img src="./assets/images/diplom.svg" alt="diplom">
                                                     </div>
-                                                    <button type="button" class="img_zoom">
+                                                    <button type="button" class="img_zoom" data-modal="diplom">
                                                         <img src="./assets/images/icon_zoom.svg" alt="zoom">
                                                     </button>
                                                 </div>
@@ -893,13 +937,33 @@
                                             <li>
                                                 <div class="list_check_item">
                                                     <img src="./assets/images/activity_check.svg" alt="icon">
-                                                    <h5>Диплом Торгово-промышленной Палаты РФ за активное содействие в развитии малого и среднего бизнеса</h5>
+                                                    <h5>Благодарность от Петербургского Международного Экономического форума ПМЭФ 2024 г. за поддержку
+                                                        и деятельное участие в работе</h5>
                                                 </div>
                                                 <div class="award_img_box">
                                                     <div class="award_img">
-                                                        <img src="./assets/images/diplom.png" alt="diplom">
+                                                        <img src="./assets/images/forum.svg" alt="diplom">
                                                     </div>
-                                                    <button type="button" class="img_zoom">
+                                                    <button type="button" class="img_zoom" data-modal="forum1">
+                                                        <img src="./assets/images/icon_zoom.svg" alt="zoom">
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                <div class="awards_item">
+                                    <div class="awards_award">
+                                        <ul>
+                                            <li>
+                                                <div class="list_check_item">
+                                                    <img src="./assets/images/activity_check.svg" alt="icon">
+                                                    <h5>Благодарность от Международного Муниципального форума БРИКС, VI Экономический Конгресс 2024 г.</h5>
+                                                </div>
+                                                <div class="award_img_box">
+                                                    <div class="award_img">
+                                                        <img src="./assets/images/forum2.svg" alt="diplom">
+                                                    </div>
+                                                    <button type="button" class="img_zoom" data-modal="forum2">
                                                         <img src="./assets/images/icon_zoom.svg" alt="zoom">
                                                     </button>
                                                 </div>
@@ -921,7 +985,7 @@
         </section>
 
 
-        <section class="letters awards">
+        <section class="letters awards" id="letters">
             <div class="container">
                 <h2 class="section_title">Благодарственные письма <br>
                     и рекомендации</h2>
@@ -943,13 +1007,13 @@
                                             <li>
                                                 <div class="list_check_item">
                                                     <img src="./assets/images/activity_check.svg" alt="icon">
-                                                    <h5>Диплом Торгово-промышленной Палаты РФ за активное содействие в развитии малого и среднего бизнеса</h5>
+                                                    <h5>Благодарственное письмо от Торгово-промышленной Палаты РФ</h5>
                                                 </div>
                                                 <div class="award_img_box">
                                                     <div class="award_img">
-                                                        <img src="./assets/images/diplom.png" alt="diplom">
+                                                        <img src="./assets/images/diplom.svg" alt="diplom">
                                                     </div>
-                                                    <button type="button" class="img_zoom">
+                                                    <button type="button" class="img_zoom" data-modal="diplom">
                                                         <img src="./assets/images/icon_zoom.svg" alt="zoom">
                                                     </button>
                                                 </div>
@@ -963,13 +1027,34 @@
                                             <li>
                                                 <div class="list_check_item">
                                                     <img src="./assets/images/activity_check.svg" alt="icon">
-                                                    <h5>Диплом Торгово-промышленной Палаты РФ за активное содействие в развитии малого и среднего бизнеса</h5>
+                                                    <h5>Благодарственное письмо от Петербургского Международного Экономического форума ПМЭФ 2024 г. за поддержку и деятельное участие в работе</h5>
                                                 </div>
                                                 <div class="award_img_box">
                                                     <div class="award_img">
-                                                        <img src="./assets/images/diplom.png" alt="diplom">
+                                                        <img src="./assets/images/forum.svg" alt="forum1">
                                                     </div>
-                                                    <button type="button" class="img_zoom">
+                                                    <button type="button" class="img_zoom" data-modal="forum1">
+                                                        <img src="./assets/images/icon_zoom.svg" alt="zoom">
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="awards_item">
+                                    <div class="awards_award">
+                                        <ul>
+                                            <li>
+                                                <div class="list_check_item">
+                                                    <img src="./assets/images/activity_check.svg" alt="icon">
+                                                    <h5>Благодарственное письмо
+                                                        от Международного Муниципального форума БРИКС, VI Экономический Конгресс 2024 г.</h5>
+                                                </div>
+                                                <div class="award_img_box">
+                                                    <div class="award_img">
+                                                        <img src="./assets/images/forum2.svg" alt="forum2">
+                                                    </div>
+                                                    <button type="button" class="img_zoom" data-modal="forum2">
                                                         <img src="./assets/images/icon_zoom.svg" alt="zoom">
                                                     </button>
                                                 </div>
@@ -1007,7 +1092,39 @@
                                     <div class="awards_award">
                                        <div class="list_check_item">
                                         <img src="./assets/images/activity_check.svg" alt="icon">
+                                        <h5>Рекомендации от Петербургского Международного Экономического форума ПМЭФ 2024 г.</h5>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="awards_item">
+                                    <div class="awards_award">
+                                       <div class="list_check_item">
+                                        <img src="./assets/images/activity_check.svg" alt="icon">
+                                        <h5>Рекомендации от Международного Муниципального форума БРИКС, VI Экономический Конгресс 2024 г.</h5>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="awards_item">
+                                    <div class="awards_award">
+                                       <div class="list_check_item">
+                                        <img src="./assets/images/activity_check.svg" alt="icon">
                                         <h5>Рекомендации от Торгово-промышленной Палаты РФ</h5>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="awards_item">
+                                    <div class="awards_award">
+                                       <div class="list_check_item">
+                                        <img src="./assets/images/activity_check.svg" alt="icon">
+                                        <h5>Рекомендации от Петербургского Международного Экономического форума ПМЭФ 2024 г.</h5>
+                                       </div>
+                                    </div>
+                                </div>
+                                <div class="awards_item">
+                                    <div class="awards_award">
+                                       <div class="list_check_item">
+                                        <img src="./assets/images/activity_check.svg" alt="icon">
+                                        <h5>Рекомендации от Международного Муниципального форума БРИКС, VI Экономический Конгресс 2024 г.</h5>
                                        </div>
                                     </div>
                                 </div>
@@ -1112,6 +1229,57 @@
                 </div>
             </div>
         </footer>
+        <!-- Universal Modal -->
+        <div class="modal_overlay" id="universalModal">
+          <div class="custom_modal container">
+            <span class="modal_close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43" fill="none">
+                    <path d="M10.6067 31.8198L31.8199 10.6066" stroke="white"/>
+                    <path d="M31.8198 31.8198L10.6066 10.6066" stroke="white"/>
+                </svg>
+            </span>
+            <div class="modal_content">
+              <div class="modal_slider">
+                <div class="modal_items_wrapper swiper">
+                  <div class="swiper-wrapper" id="modalContentWrapper"></div>
+                </div>
+                <div class="modal_controls">
+                  <div class="modal_prev arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+                        <path d="M31 15H1" stroke="#29292E"/>
+                        <path d="M11 5L1 15L11 25" stroke="#29292E"/>
+                    </svg>
+                </div>
+                  <div class="modal_next arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+                        <path d="M0 15H30" stroke="#29292E"/>
+                        <path d="M20 5L30 15L20 25" stroke="#29292E"/>
+                      </svg>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal_data" id="videoPresentation" style="display: none;">
+          <div class="modal_slide" data-type="video" data-src="./assets/images/video1.mp4"></div>
+        </div>
+        <div class="modal_data" id="galleryModal" style="display: none;">
+          <div class="modal_slide" data-type="video" data-src="./assets/images/video1.mp4"></div>
+          <div class="modal_slide" data-type="image" data-src="./assets/images/swiper_img.svg"></div>
+          <div class="modal_slide" data-type="image" data-src="./assets/images/swiper_img.svg"></div>
+        </div>
+        <div class="modal_data" id="diplom" style="display: none;">
+            <div class="modal_slide" data-type="image" data-src="./assets/images/diplom.svg"></div>
+          </div>
+          <div class="modal_data" id="forum1" style="display: none;">
+            <div class="modal_slide" data-type="image" data-src="./assets/images/forum.svg"></div>
+          </div>
+          <div class="modal_data" id="forum2" style="display: none;">
+            <div class="modal_slide" data-type="image" data-src="./assets/images/forum2.svg"></div>
+          </div>
+  
 
     </div>
     <!-- Bootstrap -->
