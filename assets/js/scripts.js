@@ -131,22 +131,25 @@ $(document).ready(function () {
   
     $('.modal_overlay').on('click', function (e) {
       if ($(e.target).is('.modal_overlay')) {
-        $(this).fadeOut(300);
-        $('#modalContentWrapper').empty();
-        $('.modal_overlay video').each(function () {
-          this.pause();
+        const $this = $(this);
+        $this.fadeOut(300, function () {
+          $('#modalContentWrapper .swiper-wrapper').empty(); // fadeOut tugagach tozalash
+          $this.find('video').each(function () {
+            this.pause();
+          });
         });
       }
     });
     
     $('.modal_close').on('click', function () {
-      $(this).closest('.modal_overlay').fadeOut(300);
-      $('#modalContentWrapper').empty();
-      $('.modal_overlay video').each(function () {
-        this.pause();
+      const $overlay = $(this).closest('.modal_overlay');
+      $overlay.fadeOut(300, function () {
+        $('#modalContentWrapper .swiper-wrapper').empty(); // fadeOut tugagach tozalash
+        $overlay.find('video').each(function () {
+          this.pause();
+        });
       });
     });
-  
     // $(document).on('click', '.video_play_pause', function () {
     //   const video = $(this).closest('.modal_slide').find('video').get(0);
     //   if (video.paused) {

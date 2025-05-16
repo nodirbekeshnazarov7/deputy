@@ -16,24 +16,141 @@
     .container{
         max-width: 1140px;
     }
+
+    /* settings */
+    /* ===== */
+    
+
+    /* header */
+    .header{
+        &_block{
+            border-radius: 12px;
+        }
+        &_menus{
+            a{
+                font-size: 16px;
+                line-height: 28px;
+                padding: 1px 15px;
+                border-radius: 6px;
+            }
+        }
+        &_contact{
+            a{
+                font-size: 16px;
+                line-height: 28px;
+                padding: 1px 15px;
+                border-radius: 6px;
+            }
+        }
+    }
+    /* ===== */
+
+    /* hero*/
+    .hero{
+        &_block{
+            height: 666px;
+        }
+        &_img{
+            img{
+                width: 530px;
+            }
+        }
+    }
+    /* ======= */
+
+
+    /* footer */
+    /* ===== */
 }
 @media (max-width:1200px){
     .container{
         max-width: 960px;
     }
+    
+    /* settings */
+    h1{
+        font-size: 60px;
+    }
+    /* ===== */
+    
+    
+    /* header */
+    .header{
+        &_menus{
+            gap: 0;
+            a{
+                padding: 0 10px;
+            }
+        }
+    }
+    /* ===== */
+
+    /* hero */
+    .hero{
+        .text_1 {
+            margin-bottom: 70px;
+            max-width: 58%;
+        }
+        h5{
+            max-width: 58%;
+        }
+    } 
+    /* =========*/
+
+
+    /* footer */
+    .footer{
+        &_block{
+            gap: 30px;
+        }
+    }
+    /* ===== */
 }
 @media (max-width:992px){
     .container{
         max-width: 720px;
     }
+
+    /* settings */
+    /* ===== */
+    
+    
+    /* header */
+    /* ===== */
+
+
+    /* footer */
+    /* ===== */
 }
 @media (max-width:768px){
     .container{
         max-width: 540px;
     }
+
+    /* settings */
+    /* ===== */
+    
+    
+    /* header */
+    /* ===== */
+
+
+    /* footer */
+    /* ===== */
 }
 @media (max-width:576px){
     .container{
         max-width: 100%;
     }
+
+    /* settings */
+    /* ===== */
+    
+    
+    /* header */
+    /* ===== */
+
+
+    /* footer */
+    /* ===== */
 }
