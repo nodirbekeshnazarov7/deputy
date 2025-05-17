@@ -3,12 +3,16 @@ $(document).ready(function () {
   // hamburger
   $(".hamburger_menu").on('click', function (e) {
     e.preventDefault();
-    $(".header_menus").addClass("active")
+    $(".header_menus").addClass("active");
+    $(".menus_overlay").addClass("active");
+    $('body').addClass('no-scroll');
   })
 
-  $(".close").on('click', function (e) {
+  $(".close, .menus_overlay").on('click', function (e) {
     e.preventDefault();
-    $(".header_menus").removeClass("active")
+    $(".header_menus").removeClass("active");
+    $(".menus_overlay").removeClass("active");
+    $('body').removeClass('no-scroll');
   })
 
 
@@ -108,6 +112,7 @@ $(document).ready(function () {
       if (swiperInstance) swiperInstance.destroy(true, true);
       swiperInstance = new Swiper('.modal_items_wrapper', {
         loop: false,
+        spaceBetween: 20,
         navigation: {
           nextEl: '.modal_next',
           prevEl: '.modal_prev',
