@@ -9,7 +9,7 @@
 
     &_wrapper {
         display: flex;
-        gap: 30px;
+        gap: 36px;
         border-bottom: 1px solid $black;
         padding-bottom: 80px;
 
@@ -19,11 +19,11 @@
     }
 
     &_left {
-        width: calc(34% - 30px);
+        width: 33.33%;
     }
 
     &_right {
-        width: 66%;
+        width: calc(66% - 36px);
     }
 
     &_icon {

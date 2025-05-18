@@ -346,6 +346,7 @@ h5 {
 	font-weight: 500;
 	line-height: 36px;
 	/* 180% */
+	cursor: pointer;
 	transition: all .3s ease;
 
 	&:hover {
@@ -527,7 +528,9 @@ textarea {
 	padding: 0;
 	box-sizing: border-box;
 }
-
+html{
+	scroll-behavior: smooth;
+}
 body {
 	font-family: Gilroy;
 	background: $rey_bg;
@@ -670,16 +673,16 @@ hr {
 	&_content{
 		display: flex;
 		align-items: flex-start;
-		gap: 32px;
-		width: 100%;
+		gap: 36px;
+		width: 88%;
 	}
 	.text_2{
-		max-width: 593px;
+		max-width: 63%;
 		width: 100%;
 	}
   }
   .accordion_title{
-	max-width: 312px;
+	max-width: calc(37% - 36px);
 	width: 100%;
   }
   .accordion_icon{

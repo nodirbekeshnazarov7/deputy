@@ -33,7 +33,7 @@
             a {
                 font-size: 16px;
                 line-height: 28px;
-                padding: 1px 15px;
+                padding: 1px 6px;
                 border-radius: 6px;
             }
         }
@@ -87,10 +87,6 @@
     .header {
         &_menus {
             gap: 0;
-
-            a {
-                padding: 0 10px;
-            }
         }
     }
 
@@ -393,6 +389,19 @@
             }
         }
 
+        &_lang {
+            a {
+                padding-left: 0;
+                padding-right: 0;
+                border-right: 1px solid $white;
+                color: $white;
+
+                &.active {
+                    display: none;
+                }
+            }
+        }
+
         .hamburger_menu {
             display: block;
         }
@@ -552,6 +561,7 @@
 
         &_left {
             width: 100%;
+            padding-left: 40px;
         }
 
         &_right {
@@ -575,6 +585,17 @@
     /* ===== */
 
     /* letters */
+    .letters {
+        .awards_left {
+            width: 100%;
+            padding: 0;
+        }
+
+        .awards_right {
+            width: 100%;
+        }
+    }
+
     /* ===== */
 
     /* footer */
@@ -687,6 +708,11 @@
 
         .btn_video {
             display: inline-flex;
+            padding: 8px 12px;
+
+            span {
+                display: none;
+            }
         }
 
         &_img {
@@ -702,11 +728,13 @@
             max-width: 53%;
         }
     }
+
     /* ===== */
 
     /* awards */
     .awards {
         margin-bottom: 60px;
+
         &_block {
             gap: 40px;
         }
@@ -715,6 +743,7 @@
             padding-bottom: 40px;
         }
     }
+
     /* ===== */
 
     /* letters */
@@ -726,6 +755,7 @@
             border-radius: 16px;
         }
     }
+
     /* ===== */
 
     /* keys */
@@ -765,7 +795,21 @@
     /* header */
     .header {
         &_menus {
-            width: inherit;
+            width: 100%;
+        }
+    }
+
+    /* ===== */
+
+
+    /* letters */
+    .letters {
+        .awards_left {
+            width: 100%;
+        }
+
+        .awards_right {
+            width: 100%;
         }
     }
 
@@ -774,9 +818,10 @@
 
     /* footer */
     .footer {
-        &_img{
+        &_img {
             margin-bottom: 20px;
         }
+
         &_email {
             font-size: 18px;
         }
@@ -788,16 +833,26 @@
                 display: none;
             }
         }
-        &_socials{
+
+        &_socials {
             gap: 20px;
             justify-content: space-between;
         }
-        form{
-            h2{
+
+        form {
+            h2 {
                 margin-bottom: 20px;
             }
+
+            button {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
-        &_copyright{
+
+        &_copyright {
             left: 20px;
         }
     }
