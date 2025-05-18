@@ -15,6 +15,18 @@ $(document).ready(function () {
     $('body').removeClass('no-scroll');
   })
 
+  $(".header_menus a").on("click", function () {
+    const target = $(this).attr("href");
+
+    $("html, body").animate({
+      scrollTop: $(target).offset().top
+    }, 300);
+
+    $(".header_menus").removeClass("active");
+    $(".menus_overlay").removeClass("active");
+    $("body").removeClass("no-scroll");
+  });
+
 
   // accordion
   $('.accordion_header').click(function () {
@@ -72,18 +84,18 @@ $(document).ready(function () {
   // custom modal
   $(function () {
     let swiperInstance;
-  
+
     $('[data-modal]').on('click', function () {
-      const modalDataId = $(this).data('modal'); 
+      const modalDataId = $(this).data('modal');
       const $slides = $('#' + modalDataId + ' .modal_slide');
       const $wrapper = $('#modalContentWrapper');
       $wrapper.empty();
-  
+
       $slides.each(function () {
         const type = $(this).data('type');
         const src = $(this).data('src');
         let slideContent = '';
-  
+
         if (type === 'video') {
           slideContent = `
             <div class="swiper-slide">
@@ -100,15 +112,15 @@ $(document).ready(function () {
               </div>
             </div>`;
         }
-      //   <div class="video_controls">
-      //   <button class="video_play_pause">Play</button>
-      // </div>
-  
+        //   <div class="video_controls">
+        //   <button class="video_play_pause">Play</button>
+        // </div>
+
         $wrapper.append(slideContent);
       });
-  
+
       $('#universalModal').fadeIn(300);
-  
+
       if (swiperInstance) swiperInstance.destroy(true, true);
       swiperInstance = new Swiper('.modal_items_wrapper', {
         loop: false,
@@ -126,14 +138,14 @@ $(document).ready(function () {
           }
         }
       });
-  
+
       if ($slides.length <= 1) {
         $('.modal_prev, .modal_next').hide();
       } else {
         $('.modal_prev, .modal_next').show();
       }
     });
-  
+
     $('.modal_overlay').on('click', function (e) {
       if ($(e.target).is('.modal_overlay')) {
         const $this = $(this);
@@ -145,7 +157,7 @@ $(document).ready(function () {
         });
       }
     });
-    
+
     $('.modal_close').on('click', function () {
       const $overlay = $(this).closest('.modal_overlay');
       $overlay.fadeOut(300, function () {
@@ -169,13 +181,13 @@ $(document).ready(function () {
     function updateNavButtons(swiper) {
       const $nextBtn = $('.modal_next');
       const $prevBtn = $('.modal_prev');
-  
+
       if (swiper.isEnd) {
         $nextBtn.addClass('disabled');
       } else {
         $nextBtn.removeClass('disabled');
       }
-  
+
       if (swiper.isBeginning) {
         $prevBtn.addClass('disabled');
       } else {
@@ -183,5 +195,5 @@ $(document).ready(function () {
       }
     }
   });
-  
+
 });

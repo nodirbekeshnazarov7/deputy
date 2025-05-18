@@ -1,11 +1,13 @@
-.header{
+.header {
     margin-top: 40px;
     position: relative;
     z-index: 999;
-    .hamburger_menu{
+
+    .hamburger_menu {
         display: none;
     }
-    &_block{
+
+    &_block {
         background-color: $brown_light;
         border-radius: 15px;
         padding: 10px 10px 10px 20px;
@@ -14,6 +16,7 @@
         justify-content: space-between;
         position: relative;
     }
+
     .menus_overlay {
         position: fixed;
         top: 0;
@@ -25,47 +28,98 @@
         visibility: hidden;
         transition: opacity 0.3s ease;
         z-index: 999;
+
         &.active {
-          opacity: 1;
-          visibility: visible;
+            opacity: 1;
+            visibility: visible;
         }
     }
-    &_menus{
+
+    &_menus {
         display: flex;
         align-items: center;
-        gap: 4px;
-        .close{
+        gap: 6px;
+
+        .close {
             display: none;
         }
-        a{
+
+        a {
             color: $white;
             font-family: Gilroy;
             font-size: 20px;
             font-style: normal;
             font-weight: 500;
-            line-height: 36px; /* 180% */
+            line-height: 36px;
+            /* 180% */
             transition: all .3s ease;
-            padding: 2px 20px;
+            padding: 2px 10px;
             border-radius: 8px;
-            &:hover{
+
+            &:hover {
                 background-color: $brown_hower;
             }
-            &.active{
+
+            &.active {
                 background-color: $brown_hower;
             }
         }
     }
-    &_contact{
-       a{
-        background-color: $brown_dark;
-        border-radius: 8px;
-        padding: 2px 20px;
-        color: $white;
-        font-family: Gilroy;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 36px; /* 180% */
-       }
+
+    &_contact {
+        a {
+            background-color: $brown_dark;
+            border-radius: 8px;
+            padding: 2px 20px;
+            color: $white;
+            font-family: Gilroy;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 36px;
+            /* 180% */
+        }
+    }
+
+    &_left {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    &_langs {
+        display: flex;
+    }
+
+    &_lang {
+        a {
+            padding-left: 8px;
+            padding-right: 8px;
+            border-right: 1px solid $white;
+            color: $white;
+
+            &.active {
+                color: $white;
+                opacity: .5;
+            }
+
+            &:hover {
+                color: $white;
+                opacity: .5;
+            }
+        }
+
+        &:first-child {
+            a {
+                padding-left: 0;
+            }
+        }
+
+        &:last-child {
+            a {
+                padding-right: 0;
+                border-right: none;
+            }
+        }
     }
 }
