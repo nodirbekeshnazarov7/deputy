@@ -7,13 +7,13 @@
     }
     &_main{
         display: flex;
-        gap: 30px;
+        gap: 84px;
     }
     &_left{
-        width: calc(32% - 30px);
+        width: calc(31% - 48px);
     }
     &_right{
-        width: 68%;
+        width: calc(69% - 36px);
     }
     &_icon{
         height: 68px;
